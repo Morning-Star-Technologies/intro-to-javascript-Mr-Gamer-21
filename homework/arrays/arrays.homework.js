@@ -9,3 +9,12 @@
 */
 
 // Begin writing your code below
+
+let abc= ['5', '6', '7', '8', '9',]
+abc2 = 10
+
+let var1 = abc[2]
+console.log(var1)
+let average = abc[0] + abc[1]
+
+console.log(average)
