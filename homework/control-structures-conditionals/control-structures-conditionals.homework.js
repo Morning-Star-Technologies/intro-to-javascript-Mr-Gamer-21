@@ -6,3 +6,23 @@
 */
 
 // Begin writing your code below
+
+let runnerOnFirstBase = true
+let runnerOnSecondBase = true
+let runnerOnThirdBase = false
+let age = 10
+const ageGroup = age >= 9
+const coachesAgreed = true
+const infieldFlyRuleExist = ageGroup && coachesAgreed
+
+  console.log('Is there the infield fly rule?', infieldFlyRuleExist)
+let firstAndSecond =  runnerOnFirstBase && runnerOnSecondBase
+
+if (firstAndSecond && runnerOnThirdBase) {
+    console.log('Bases Loaded')
+}
+
+console.log('Fly ball is hit is the batter automatically out?')
+
+if (runnerOnFirstBase && runnerOnSecondBase) { 
+    console.log('Infield Fly rule is active, he is out')}
