@@ -10,15 +10,11 @@
 
 // Begin writing your code below
 
-let nightfallUprisingVariables = new Array('Poe Lantern', 'Bombs', 'Elixirs', 'Arrows', 'Map'); // Task #1
+let abc= ['5', '6', '7', '8', '9',]
+abc2 = 10
 
-console.log(nightfallUprisingVariables[0]); // Task #2
-console.log(nightfallUprisingVariables[4]); // Task #2
+let var1 = abc[2]
+console.log(var1)
+let average = abc[0] + abc[1]
 
-nightfallUprisingVariables[2] = 99 // Task #3
-
-nightfallUprisingVariables[5] = true // Task #4
-nightfallUprisingVariables[6] = false // Task #4
-
-console.log(nightfallUprisingVariables); // Task #5
-console.log(nightfallUprisingVariables.length) // Task #5
+console.log(average)
