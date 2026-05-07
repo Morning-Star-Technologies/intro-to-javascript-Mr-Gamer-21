@@ -6,3 +6,17 @@
 */
 
 // Begin writing your code below
+
+let woodenBow = true;
+
+if (woodenBow === true) {
+    console.log("You need a better weapon, brother.");
+}
+
+let weapon = false;
+
+if (weapon === true) {
+    console.log("Good, you're not entirely defenseless...");
+} else {
+    console.log("You need a weapon, brother!");
+}
