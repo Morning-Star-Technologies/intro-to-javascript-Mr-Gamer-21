@@ -10,10 +10,12 @@
 
 // Begin writing your code below
 
-let nightfallUprisingVariables = new Array('Poe Lantern', 'Bombs', 99, 'Arrows', 'Map', true, false);
+let nightfallUprisingVariables = new Array('Poe Lantern', 'Bombs', 'Elixirs', 'Arrows', 'Map', true, false);
 
 console.log(nightfallUprisingVariables[0]);
 console.log(nightfallUprisingVariables[4]);
+
+nightfallUprisingVariables[2] = 99
 
 console.log(nightfallUprisingVariables);
 console.log(nightfallUprisingVariables.length)
