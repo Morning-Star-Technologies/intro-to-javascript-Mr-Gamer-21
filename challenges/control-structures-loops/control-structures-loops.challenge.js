@@ -5,3 +5,15 @@
 */
 
 // Begin writing your code below
+
+// simplified using a while loop
+
+let items = ["Poe Lantern", "Compass", "Map"] 
+
+let i = 0;
+while (i < items.length) {
+  if (items[i].includes('a')) {
+    console.log(items[i]);
+  }
+  i++;
+}
