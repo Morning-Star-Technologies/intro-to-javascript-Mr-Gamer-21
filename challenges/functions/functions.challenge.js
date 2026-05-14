@@ -11,3 +11,27 @@
 */
 
 // Begin writing your code below
+
+// First function...
+function square(num1) {
+     console.log(num1 * num1);
+}
+// Callin' 'em...
+square(7);
+square(4);
+square(9);
+
+// Second function...
+function booleans(array1) {
+     console.log()
+     return array1.length
+}
+//Callin' it...
+let result = booleans([true, false, false, true, true]);
+// Not code below here, demonstrations...
+
+function addStuff(num1, num2) {  // (1, 1)
+  return num1 + num2; // 2
+}
+
+let sum = addStuff(1,1);
