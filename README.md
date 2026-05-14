@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=23452880&assignment_repo_type=AssignmentRepo)
 # intro-to-javascript
 *An instructive repository for teaching the basics of JavaScript.*
 
@@ -71,6 +72,3 @@ menu and no little blue circle by the source control icon.  See below.
     ![alt text](images/feedback-comment.png)
 
 3. The instructor will receive a notification that you left a comment and he will (hopefully) respond in a timely manner.
-
-Whatever, it doesn't matter...
-
