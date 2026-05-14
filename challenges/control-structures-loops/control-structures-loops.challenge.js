@@ -5,3 +5,16 @@
 */
 
 // Begin writing your code below
+i = 0
+while(i<25){
+     if(Math.sin(i) > 0){     //I had to look up how to use Sin (I hope it's not cheating)
+          booleans.push(true) //Also it keeps giving me AI suggestions and I don't know how to get rid of it.
+     } else {
+          booleans.push(false)}
+i++
+}
+console.log(booleans)
+
+console.log('')
+console.log('')
+console.log('')
