@@ -8,3 +8,17 @@
 */
 
 // Begin writing your code below
+
+// First function...
+function items(item1, item2) {
+    console.log(item1 + item2);
+}
+// Callin' it...
+items("Map ", "Compass");
+
+// Second function...
+function numbers(num1) {
+    console.log(num1 + num1);
+}
+// Callin' it...
+numbers(1);
