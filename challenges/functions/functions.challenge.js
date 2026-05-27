@@ -17,21 +17,39 @@ function square(num1) {
      console.log(num1 * num1);
 }
 // Callin' 'em...
-square(7);
-square(4);
-square(9);
+// square(7);
+// square(4);
+// square(9);
+
+/***************************************/
 
 // Second function...
 function booleans(array1) {
-     console.log()
-     return array1.length
+     let numberOfTrues = 0;
+     let numberOfFalses = 0;
+     for (let i = 0; i < array1.length; i++) {
+          if (array1[i] === true) {
+               numberOfTrues++;
+          }     
+          if (array1[i] === false) {
+                    numberOfFalses++;
+          }
+          
+     }
+     console.log(numberOfTrues);
+     console.log(numberOfFalses);
+     return array1.length // return 5;
 }
-//Callin' it...
+// Callin' it...
 let result = booleans([true, false, false, true, true]);
-// Not code below here, demonstrations...
+console.log(result);
 
-function addStuff(num1, num2) {  // (1, 1)
-  return num1 + num2; // 2
-}
+/***************************************/
 
-let sum = addStuff(1,1);
+// Below is just for code demonstrations...
+
+// function addStuff(num1, num2) {  // (1, 1)
+//   return num1 + num2; // 2
+// }
+
+// let sum = addStuff(1,1);
