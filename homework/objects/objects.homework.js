@@ -17,3 +17,6 @@ class HoneyBadger {
 }
 
 // Begin writing your code below
+
+const bunga = new HoneyBadger("Bunga", "20 Pounds");
+console.log(this.name + this.weight);
