@@ -8,6 +8,26 @@
 * 5. A variable that holds null
 * 
 * Then log each of these variables to the console showing the variable name and its value.
+*
+* Example:
+*    let weapon = "Long Bow";
+*    console.log("weapon:", weapon);
 */
 
 // Begin writing your code below
+
+let manager = "Micheal Scott";
+
+console.log("manager is",manager)
+
+const setting = ("Dunder Mifflin, Scranton")
+
+const State = Pennsylvania
+
+let StamfordBranch = null
+
+let daytime = false
+
+let time = 13.00
+
+let HR = undefined
