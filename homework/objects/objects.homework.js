@@ -10,13 +10,23 @@
  */
 
 class HoneyBadger {
-    constructor(name, weight) {
+    constructor(name, weight, isFierce) {
         this.name = name;
         this.weight = weight;
+        this.isFierce = isFierce;
     }
+        bark() {
+            console.log(this.isFierce + " - Link's honeybadger killed Ganon!");
+        }
+
 }
 
 // Begin writing your code below
 
-const bunga = new HoneyBadger("Bunga", "20 Pounds");
-console.log(this.name + this.weight);
+const bunga = new HoneyBadger("Bunga", "20 Pounds", true);
+console.log(bunga.name);
+console.log(bunga.weight);
+console.log(bunga.isFierce);
+
+// Calling the 'bark' method:
+bunga.bark();
