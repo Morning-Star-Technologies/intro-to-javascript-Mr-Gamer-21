@@ -8,3 +8,20 @@
  */
 
 // Begin writing your code below
+
+const link = {
+    name: 'Link',
+    health: 20,
+    companion: 'Navi',
+    weapon: 'Master Sword',
+    battle: function() {
+        console.log(this.name + ' defeated Ganon with the ' + this.weapon + ' and still had ' + this.health + ' full hearts! He took no damage!');
+    },
+     warning: function() {
+        console.log(this.companion + ' warned ' + this.name + ' about the monsters.');
+    },
+};
+
+// Calling the stuff.
+link.battle();
+link.warning();
