@@ -80,13 +80,24 @@ function closeInput() {
 
 async function playGame() {
   
-    // The line below creates a new random secret number each game
+    // The line(s) below (not the short one, the next two, 86 & 87) creates a new random secret number each game
+    console.log(" "); // I entered this here (me, the student) to make it look cleaner in the terminal.
+    
     const secretNumber = Math.floor(Math.random() * 100) + 1;
-    const numberOfAttempts = await askForNumber('Welcome to the guessing game! How many attempts would you like to have? ');
+    const numberOfAttempts = await askForNumber('Welcome to the guessing game! How many attempts (or guesses) would you like to have (please enter strictly with digits)? ');
 
-    // ALL YOUR CODE GOES HERE
+    console.log(" ");
+    console.log("Great! You have " + numberOfAttempts + " attempt(s) to find the secret number. Remember, it's between 1 and 100, so no need to go beyond those boundaries.");
+    
+    await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that.");
 
-  // Don't touch this line - it ends the game appropriately
+    if (output === secretNumber) {
+      console.log("Holy cow, you got it first shot! That's correct! It's " + secretNumber + "!");
+    } else {
+      
+    }
+
+    // Don't touch this line - it ends the game appropriately
   closeInput();
 }
 
