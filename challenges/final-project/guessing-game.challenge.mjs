@@ -86,6 +86,16 @@ async function playGame() {
     const secretNumber = Math.floor(Math.random() * 100) + 1;
     const numberOfAttempts = await askForNumber('Welcome to the guessing game! How many attempts (or guesses) would you like to have (please enter strictly with digits)? ');
 
+   function handlingReplies() {
+    let i = 0;
+while (i < TBD.length) {
+  if (TBD[i].includes('a')) {
+    console.log(TBD[i]);
+  }
+    i++;
+}
+   };
+
     console.log(" ");
     console.log("Great! You have " + numberOfAttempts + " attempt(s) to find the secret number. Remember, it's between 1 and 100, so no need to go beyond those boundaries.");
     
@@ -94,7 +104,7 @@ async function playGame() {
     if (output === secretNumber) {
       console.log("Holy cow, you got it first shot! That's correct! It's " + secretNumber + "!");
     } else {
-      
+      handlingReplies();
     }
 
     // Don't touch this line - it ends the game appropriately
