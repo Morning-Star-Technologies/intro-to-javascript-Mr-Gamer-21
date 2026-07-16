@@ -89,25 +89,26 @@ async function playGame() {
     console.log(" ");
     console.log("Great! You have " + numberOfAttempts + " attempt(s) to find the secret number. Remember, it's between 1 and 100, so no need to go beyond those boundaries.");
     
-    await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that.");
+    let guess = await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that.");
 
-    if (output === secretNumber) {
+    if (guess === secretNumber) {
       console.log("Holy cow, you got it first shot! That's correct! It's " + secretNumber + "!");
     } else {
-      let i = output;
-  while (i !== secretNumber) {
-    if ([i] === secretNumber) {
-      console.log("Nope That's incorrect. You're looking for a number that's");
-      if([i]) < secretNumber {
-        console.log(" higher than that.");
-      } else {
+      while (guess !== secretNumber) {
+        if (guess !== secretNumber) {
+          console.log("Nope That's incorrect. You're looking for a number that's");
+        }
+        if (guess < secretNumber) {
+          console.log(" higher than that.");
+        } else {
         console.log(" lower than that.");
-      }
-}
-   } await askForNumber("Knowing that, what's your next guess?");
-  }
+        }
+        guess++;
+      } await askForNumber("Knowing that, what's your next guess?");
+      
+   }
     // Don't touch this line - it ends the game appropriately
   closeInput();
-
+  }
 // Don't touch this line - it actually calls the function to start the game
 playGame();
