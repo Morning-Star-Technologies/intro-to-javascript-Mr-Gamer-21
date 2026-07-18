@@ -86,7 +86,9 @@ async function playGame() {
     const secretNumber = Math.floor(Math.random() * 100) + 1;
     const numberOfAttempts = await askForNumber('Welcome to the guessing game! How many attempts (or guesses) would you like to have (please enter strictly with digits)? ');
 
-    console.log(" ");
+console.log(secretNumber); // For testing, delete this later!
+
+    console.log(" "); // Makes it neater in the terminal
     console.log("Great! You have " + numberOfAttempts + " attempt(s) to find the secret number. Remember, it's between 1 and 100, so no need to go beyond those boundaries.");
     
     let guess = await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that.");
@@ -96,17 +98,23 @@ async function playGame() {
     } else {
       while (guess !== secretNumber) {
         if (guess !== secretNumber) {
+          
+          console.log(" ");
+          
           console.log("Nope That's incorrect. You're looking for a number that's");
         }
         if (guess < secretNumber) {
-          console.log(" higher than that.");
+          console.log("higher than that.");
         } else {
-        console.log(" lower than that.");
+        console.log("lower than that.");
         }
-        guess++;
-      } await askForNumber("Knowing that, what's your next guess?");
+        console.log(" "); // Makes it neater in the terminal
+        let guess = await askForNumber("Knowing that, what's your next guess?");
+      } guess++;
       
    }
+
+   console.log("Yes! That's correct, it's " + secretNumber + "!");
     // Don't touch this line - it ends the game appropriately
   closeInput();
   }
