@@ -81,12 +81,11 @@ function closeInput() {
 async function playGame() {
   
     // The line(s) below (not the short one, the next two, 86 & 87) creates a new random secret number each game
+   
     console.log(" "); // I entered this here (me, the student) to make it look cleaner in the terminal.
     
     const secretNumber = Math.floor(Math.random() * 100) + 1;
     const numberOfAttempts = await askForNumber('Welcome to the guessing game! How many attempts (or guesses) would you like to have (please enter strictly with digits)? ');
-
-console.log(secretNumber); // For testing, delete this later!!!!!
 
     console.log(" "); // Makes it neater in the terminal
     console.log("Great! You have " + numberOfAttempts + " attempt(s) to find the secret number. Remember, it's between 1 and 100, so no need to go beyond those boundaries.");
@@ -94,7 +93,8 @@ console.log(secretNumber); // For testing, delete this later!!!!!
     let guess = await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that. ");
 
     let remainingGuesses = numberOfAttempts;
-    remainingGuesses - 1;
+    remainingGuesses--;
+
     if (guess === secretNumber) {
       console.log("Holy cow, you got it first shot! That's correct! It's " + secretNumber + "!");
     } else {
@@ -115,21 +115,18 @@ console.log(secretNumber); // For testing, delete this later!!!!!
         guess = await askForNumber("Knowing that, what's your next guess? ");
 
         remainingGuesses--;
-        console.log(remainingGuesses);
 
-      } guess++;
+      }
       
    }
    console.log(" "); // This make it neater in the terminal 
    
-   if (remainingGuesses = 0) {
+   if (guess === secretNumber) {
+    console.log("Yes! That's correct, it's " + secretNumber + "!");
+   } else {
     console.log("You've run out of attempts, but the number was " + secretNumber + ". Next time?");
    }
-
-   if (remainingGuesses > 0); {
-    console.log("Yes! That's correct, it's " + secretNumber + "!");
-   }
-   
+ 
   // Don't touch this line - it ends the game appropriately
   closeInput();
   }
