@@ -114,7 +114,7 @@ console.log(secretNumber); // For testing, delete this later!!!!!
 
         guess = await askForNumber("Knowing that, what's your next guess? ");
 
-        remainingGuesses - 1;
+        remainingGuesses--;
         console.log(remainingGuesses);
 
       } guess++;
@@ -124,12 +124,13 @@ console.log(secretNumber); // For testing, delete this later!!!!!
    
    if (remainingGuesses = 0) {
     console.log("You've run out of attempts, but the number was " + secretNumber + ". Next time?");
-   } else {
+   }
+
+   if (remainingGuesses > 0); {
     console.log("Yes! That's correct, it's " + secretNumber + "!");
    }
    
-   
-   // Don't touch this line - it ends the game appropriately
+  // Don't touch this line - it ends the game appropriately
   closeInput();
   }
 // Don't touch this line - it actually calls the function to start the game
