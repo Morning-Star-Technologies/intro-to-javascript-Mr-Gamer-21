@@ -91,12 +91,14 @@ console.log(secretNumber); // For testing, delete this later!!!!!
     console.log(" "); // Makes it neater in the terminal
     console.log("Great! You have " + numberOfAttempts + " attempt(s) to find the secret number. Remember, it's between 1 and 100, so no need to go beyond those boundaries.");
     
-    let guess = await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that.");
+    let guess = await askForNumber("When you're ready, give me your first guess (please enter strictly with digits), and I'll tell you if the number you're looking for is more or less than that. ");
 
+    let remainingGuesses = numberOfAttempts;
+    remainingGuesses - 1;
     if (guess === secretNumber) {
       console.log("Holy cow, you got it first shot! That's correct! It's " + secretNumber + "!");
     } else {
-      while (guess !== secretNumber) {
+      while (guess !== secretNumber && remainingGuesses > 0) {
         if (guess !== secretNumber) {
           
           console.log(" ");
@@ -110,13 +112,24 @@ console.log(secretNumber); // For testing, delete this later!!!!!
         }
         console.log(" "); // Makes it neater in the terminal
 
-        guess = await askForNumber("Knowing that, what's your next guess?");
+        guess = await askForNumber("Knowing that, what's your next guess? ");
+
+        remainingGuesses - 1;
+        console.log(remainingGuesses);
+
       } guess++;
       
    }
-    
-   console.log("Yes! That's correct, it's " + secretNumber + "!");
-    // Don't touch this line - it ends the game appropriately
+   console.log(" "); // This make it neater in the terminal 
+   
+   if (remainingGuesses = 0) {
+    console.log("You've run out of attempts, but the number was " + secretNumber + ". Next time?");
+   } else {
+    console.log("Yes! That's correct, it's " + secretNumber + "!");
+   }
+   
+   
+   // Don't touch this line - it ends the game appropriately
   closeInput();
   }
 // Don't touch this line - it actually calls the function to start the game
